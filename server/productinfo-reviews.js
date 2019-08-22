@@ -1,15 +1,15 @@
-const express = require('express');
+// const express = require('express');
 
 
-const app = express();
+// const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.json());
+// app.use(express.urlencoded());
 
-const port = 3000;
+// const port = 3000;
 
-app.listen(port, () => {
-  console.log(`Proxy server listening on port ${port}.`);
-})
+// app.listen(port, () => {
+//   console.log(`Proxy server listening on port ${port}.`);
+// })
 
-module.exports = `http://localhost:${port}/`
+// module.exports = `http://localhost:${port}/`
