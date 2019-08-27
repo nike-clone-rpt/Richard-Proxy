@@ -1,18 +1,19 @@
 const express = require('express');
 const request = require('request');
-const mayLikeUrl = 'http://localhost:1128/shoes';
+const mayLikeUrl = 'http://localhost:6970/shoes';
 const imageUrl = 'http://localhost:1121/api/images';
 const reviewsUrl = 'http://localhost:3000/api/reviews';
 
 const app = express();
+const port = 6969;
 
 app.use(express.json());
 app.use(express.urlencoded());
 
-const port = 6969;
+app.use(express.static(__dirname + '/../client/'))
 
 app.listen(port, () => {
-  console.log(`Proxy server listening on port ${port}.`);
+  console.log(`Proxy server listening on port http://localhost:${port}.`);
 })
 
 app.all('youMayLike/*', (req, res) => {
