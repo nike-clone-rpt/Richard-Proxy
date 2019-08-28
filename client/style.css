@@ -1,0 +1,15 @@
+div {
+  display: inline-block;
+}
+
+#canvas {
+  width: 45%;
+  height: auto;
+  float: left
+}
+
+#reviewApp {
+  width: 45%;
+  height: auto;
+  float: right
+}
