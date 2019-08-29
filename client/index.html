@@ -2,15 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <meta http-equiv="Content-Security-Policy" content="img-src * 'self' data:; default-src * 'unsafe-inline'"> -->
   <title>Nike Clone</title>
 </head>
 <body>
-  <div id="canvas"></div>
-  <div id="reviewApp">Placeholder for Product reviews</div>
-  <div id="youMayLike">Placehold for you may like</div>
+  <nav class="navbar sticky-top navbar-expang-lg navbar-ligt bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/61rbwgxdCKL._SL1500_.jpg" width="40" height="40" class="d-inline-block align-top">
+    </a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  </nav>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-auto align-self-start">
+            <div id="canvas">Placeholder for image canvas</div>
+        </div>
+        <div class="col align-self-end">
+          <div id="reviewApp">Placeholder for Product reviews</div>
+        </div>
+    </div>
+    <div class="row align-items-end">
+      <div id="youMayLike">Placehold for you may like</div>
+    </div>
+  </div>
   <script src="http://localhost:1121/bundle.js"></script>
   <script src='http://localhost:3000/bundle.js'></script>
   <script src='http://localhost:1128/bundle.js'></script>
