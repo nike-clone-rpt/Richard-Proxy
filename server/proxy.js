@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request');
-const mayLikeUrl = 'http://localhost:6970/shoes';
+const mayLikeUrl = 'http://localhost:1128/shoes';
 const imageUrl = 'http://localhost:1121/api/images';
 const reviewsUrl = 'http://localhost:3000/api/reviews';
 
@@ -16,21 +16,21 @@ app.listen(port, () => {
   console.log(`Proxy server listening on port http://localhost:${port}.`);
 })
 
-app.all('youMayLike/*', (req, res) => {
+app.all('/youMayLike', (req, res) => {
   console.log(`Redirecting request to ${mayLikeUrl}.`);
   let options = {
     url: `${mayLikeUrl}`,
     method: req.method,
     qs: req.query
   }
-  request(options, (err, response) => {
+  request(options, (err, response, body) => {
     if (err) {alert(err)};
-    let body = JSON.parse(response.body);
+    //let body = JSON.parse(response.body);
     res.send(body);
   })
 })
 
-app.all('images/*', (req, res) => {
+app.all('/images', (req, res) => {
   console.log(`Redirecting request to ${imageUrl}.`);
   let options = {
     url: `${mayLikeUrl}`,
@@ -44,7 +44,7 @@ app.all('images/*', (req, res) => {
   })
 })
 
-app.all('reviews/*', (req, res) => {
+app.all('/reviews', (req, res) => {
   console.log(`Redirecting request to ${reviewsUrl}.`)
   let options = {
     url: `${mayLikeUrl}`,
