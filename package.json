@@ -4,7 +4,7 @@
   "description": "",
   "main": "proxy.js",
   "scripts": {
-    "start": "concurrently --kill-others \"nodemon server/proxy.js\" \"cd canvas && npm run start\" \"cd canvas && npm run db:setup\" \"cd productinfo-reviews && npm run server\" \"cd productinfo-reviews && npm run seeddata\" \"cd you-may-like && npm run start\" \"cd you-may-like && npm run seed\""
+    "start": "concurrently --kill-others \"nodemon server/proxy.js\" \"cd canvas && npm run start\" \"cd productinfo-reviews && npm run server\" \"cd productinfo-reviews && npm run seeddata\" \"cd you-may-like && npm run start\" \"cd you-may-like && npm run seed\""
   },
   "author": "Richard Kang",
   "devDependencies": {
