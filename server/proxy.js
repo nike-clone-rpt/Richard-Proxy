@@ -1,8 +1,8 @@
 const express = require('express');
 const request = require('request');
-const mayLikeUrl = 'http://localhost:1128/shoes';
+const mayLikeUrl = 'http://you-may-like-dev.us-west-2.elasticbeanstalk.com/shoes';
 const imageUrl = 'http://localhost:1121/api/images';
-const reviewsUrl = 'http://localhost:3000/api/reviews';
+const reviewsUrl = 'http://productinforeviews-env.ergwvejvxp.us-east-2.elasticbeanstalk.com/api/reviews';
 
 const app = express();
 const port = 6969;
